@@ -32,6 +32,12 @@ model/
 
 ---
 
+## Pipeline Lineage
+
+![dbt Lineage Graph](images/lineage.png)
+
+---
+
 ## Data Source
 
 - **Dataset:** FDA Adverse Event Reporting System (FAERS) via Kaggle
