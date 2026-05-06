@@ -1,0 +1,17 @@
+pandas==2.3.3
+numpy==2.4.4
+scikit-learn==1.8.0
+xgboost==3.2.0
+shap==0.51.0
+imbalanced-learn==0.14.1
+google-cloud-bigquery==3.41.0
+google-cloud-bigquery-storage==2.37.0
+db-dtypes==1.5.1
+pyarrow==24.0.0
+dbt-core==1.11.8
+dbt-bigquery==1.11.1
+google-auth==2.50.0
+pydata-google-auth==1.9.1
+joblib==1.5.3
+scipy==1.17.1
+tqdm==4.67.3
