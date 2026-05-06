@@ -1,0 +1,25 @@
+# virtual environment
+venv/
+
+# raw data files
+raw_data/
+
+# logs
+logs/
+
+# environment variables
+.env
+
+# BigQuery credentials
+*.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# DS Store (Mac)
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/

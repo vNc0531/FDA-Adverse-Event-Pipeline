@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    project: project-569fefa7-cf8b-400f-9f3
+    dataset: raw
+    tables:
+      - name: demo
+      - name: drug
+      - name: reac
+      - name: outc
+      - name: indi
