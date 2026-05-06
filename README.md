@@ -82,6 +82,20 @@ High-cardinality columns (drugname, indication) were bucketed to top 20 values w
 | Logistic Regression | 0.8730 | 0.76 |
 | XGBoost | 0.9122 | 0.80 |
 
+---
+
+## Feature Importance (SHAP)
+
+![SHAP Summary](images/shap_summary.png)
+
+Top drivers of critical adverse event outcomes:
+- **dechal_D** — drug withdrawal strongly predicts critical outcomes
+- **age_years** — older patients more likely to experience critical outcomes  
+- **drugname_OXYCONTIN** — OxyContin presence is a strong risk indicator
+- **reporter_country_US** — US reports disproportionately associated with critical outcomes
+
+---
+
 **Class imbalance handling:**
 - Logistic Regression: `class_weight='balanced'`
 - XGBoost: `scale_pos_weight=7`

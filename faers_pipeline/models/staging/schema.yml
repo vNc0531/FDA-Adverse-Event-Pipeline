@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: stg_demo
+    columns:
+      - name: primaryid
+        tests:
+          - not_null
+          - unique
+      - name: age_years
+        tests:
+          - not_null
+
+  - name: stg_drug
+    columns:
+      - name: primaryid
+        tests:
+          - not_null
+      - name: drugname
+        tests:
+          - not_null
+
+  - name: stg_outc
+    columns:
+      - name: primaryid
+        tests:
+          - not_null
+      - name: critical_outcome
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]
+
+  - name: stg_reac
+    columns:
+      - name: primaryid
+        tests:
+          - not_null
+
+  - name: stg_indi
+    columns:
+      - name: primaryid
+        tests:
+          - not_null

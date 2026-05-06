@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: mart_adverse_event_features
+    columns:
+      - name: primaryid
+        tests:
+          - not_null
+          - unique
+      - name: critical_outcome
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]

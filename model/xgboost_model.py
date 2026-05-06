@@ -1,9 +1,12 @@
-from google.cloud import bigquery
 import pandas as pd
+from google.cloud import bigquery
 
 from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, roc_auc_score
+
+import shap
+import matplotlib.pyplot as plt
 
 client = bigquery.Client(project='project-569fefa7-cf8b-400f-9f3')
 
@@ -65,3 +68,16 @@ y_prob = xgb.predict_proba(x_test)[:, 1]
 
 print(classification_report(y_test, y_pred))
 print(f"ROC-AUC: {roc_auc_score(y_test, y_prob):.4f}")
+
+# generate SHAP values
+explainer = shap.TreeExplainer(xgb)
+shap_values = explainer.shap_values(x_test)
+
+# summary plot - shows most important features
+shap.summary_plot(shap_values, x_test, max_display=20, show=False)
+
+plt.tight_layout()
+plt.savefig('images/shap_summary.png', dpi=150, bbox_inches='tight')
+plt.close()
+
+print("SHAP plot saved to images/shap_summary.png")
