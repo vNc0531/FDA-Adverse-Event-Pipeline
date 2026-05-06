@@ -6,7 +6,7 @@ An end-to-end machine learning pipeline that predicts critical drug outcomes fro
 
 ## Project Overview
 
-The FDA Adverse Event Reporting System (FAERS) collects reports of adverse drug events and medication errors. This project ingests, transforms, and models that data to predict whether a reported adverse event will result in a critical outcome (hospitalization, disability, or death).
+The FDA Adverse Event Reporting System (FAERS) collects reports of adverse drug events and medication errors. This project ingests, transforms, and models that data to predict whether a reported adverse event will result in a critical outcome (death or life-threatening).
 
 **Business Question:** Given a reported adverse drug event, what is the likelihood it results in a critical outcome?
 
